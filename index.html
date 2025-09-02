@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>My Web Page</title>
+    </head>
+    <body>
+   
+        <h4> This is my web Page</h4>
+        <input type="button" id="btnclicked" value="Before Click"/>
+           <script type="module">
+            import employee from './employee.js'
+            document.getElementById('btnclicked').addEventListener('click', (e) => {
+                e.target.value = 'After Click';
+
+                let emp = new employee();
+                emp.showEmpInfo();
+            })
+        </script>
+    </body>
+</html>
