@@ -1,0 +1,59 @@
+React JS -
+- JS library used for creating reusable UI components
+- Provided by Meta
+- Known for speed, simplicity, scalability
+
+Advantages -
+-Easy to learn and use
+-Uses Virtual DOM to improve performance
+-Unidirectional databinding
+-Developer tools
+
+Vite
+- A build tool for faster development
+-Spin up the dev server
+
+Commands to create & run a project
+>npm create vite@latest <project name>
+>cd <projectname>
+>npm install
+>dev run npm
+
+After the Vite dev command=>
+Started the development server =>vite served the files as ES(ECMAScript ) modules by dynamically transforming jsx to js.
+
+2. vite build
+optimize the code => Transforms JSX to JS => Performs tree shaking & Code splitting.=> minification & Optimization => Create Output
+
+3. Components - Its a building block of react components. 
+Types of component
+-class components
+-function component
+
+4. JSX
+-mix of JS & HTML
+-Follow Camel casing convention
+-JSX helps to create virtual DOM by returning HTML
+
+5. React Fragments
+-Group all the html elements in between tag <></> or in <div></div>or<React.Fragment></React.Fragment>
+
+-<StrictMode></StrictMode> A helper that helps to write better react code by having additional checks to identify potential risk & prevent from side effect
+-it used in development only
+
+Databinding - 
+-A mechanism to bind data values to HTML elements
+-supports one way binding by using {}
+-useState hook should be used to maintain state and it support two way binding
+-useRef - Hook that is used to get reference to a DOM node.
+
+Virtual DOM
+-A memory representation of the DOM and sync with real DOM by using package ReactDOM
+-React will updates only the necessary part changes occurs.
+- it improves the performance of your application.
+
+useEffect -
+A function that run the code based on dependencies provided
+it will automatically trigger based on state changed
+useEffect(() ={
+}, [dependencies])
