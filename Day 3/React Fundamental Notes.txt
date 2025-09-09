@@ -1,0 +1,9 @@
+React Fundamental - 
+Component -
+- It is basically a building block of react application
+-a javascript class that accept properties and return react elements
+-can refer to other components in their output
+can be categorised as stateful or stateless component
+Two types of react components
+1.function components
+2.class components
