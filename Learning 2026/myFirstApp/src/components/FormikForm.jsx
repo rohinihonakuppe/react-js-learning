@@ -1,6 +1,9 @@
 import { categoryList } from "../Data/data";
 import { Field,Form, Formik, ErrorMessage } from "formik";
 import * as Yup from 'yup';
+import { productService } from "./Services/Product.Services";
+import { use } from "react";
+import { useNavigate } from "react-router-dom";
 
 function FormikForm() {
     const productForm = {
@@ -12,7 +15,7 @@ function FormikForm() {
     }
 
     const Categories = categoryList;
-
+    const navigate = useNavigate();
     const productValidationSchema = Yup.object({
         productId: Yup.number().required("Product Id is required"),
         productCode: Yup.string().required("Product Code is required"),
@@ -22,7 +25,14 @@ function FormikForm() {
     });
 
     const handleSubmit = (e) => {
-        alert("Product saved successfully "+JSON.stringify(e));
+        productService.addProduct(e).then((res)=>{
+            if(res.status===200){
+                alert("Product saved successfully "+JSON.stringify(e));
+                navigate('/Product');
+            }
+        }).catch((err)=>{
+            console.log(err);
+        });
     }
 
     return (<>

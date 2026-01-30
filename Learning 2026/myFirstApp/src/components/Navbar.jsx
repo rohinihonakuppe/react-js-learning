@@ -38,7 +38,7 @@ const Navbar = () => {
                                 Dropdown link
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><NavLink className='nav-link' to="/Product">Product List</NavLink></li>
                                 <li><a className="dropdown-item" href="#">Another action</a></li>
                                 <li><a className="dropdown-item" href="#">Something else here</a></li>
                             </ul>

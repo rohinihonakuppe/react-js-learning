@@ -12,6 +12,7 @@ import { lazy } from 'react';
 import FormikForm from './FormikForm';
 import { UserProvider } from './context/UserProvider';
 import Login from './Login'; 
+import ProductList from './Product';
 
 function Layout() {
     const DBinding = lazy(() => import('./Databinding'));
@@ -21,6 +22,7 @@ function Layout() {
     const ControlledComp = lazy(() => import('./Controlled'));
     const FormikForm = lazy(() => import('./FormikForm'));
     const Login = lazy(() => import('./Login'));
+    const products = lazy(() => import('./Product'));
 
     return (<>
         <BrowserRouter>
@@ -38,6 +40,8 @@ function Layout() {
                         <Route path="/Controlled" element={<Controlled />} />
                         <Route path="/formikform" element={<FormikForm />} />
                         <Route path="/Login" element={<Login />} />
+                        <Route path="/Product" element={<ProductList />} />
+                        <Route path="/formikform:id" element={<FormikForm />} />
                         <Route path="*" element={<Databinding />} />
 
                     </Routes>
